@@ -53,5 +53,16 @@
     "rating": 4.4,
     "description": "High-speed portable SSD with USB-C connectivity.",
     "image": "https://example.com/images/ssd.jpg"
+  },
+  {
+    "id": 1778503265988,
+    "name": "Portable SSD 1TB",
+    "price": 149.99,
+    "category": "Storage",
+    "brand": "SanDisk",
+    "stock": 20,
+    "rating": 4.4,
+    "description": "High-speed portable SSD with USB-C connectivity.",
+    "image": "https://example.com/images/ssd.jpg"
   }
 ]
