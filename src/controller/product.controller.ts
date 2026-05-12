@@ -30,10 +30,18 @@ export const productController = async (
   } else if (id !== null && method === "GET") {
     // get single product
     // const products = readProduct();
-    res.writeHead(200, { "content-type": "application/json" });
 
     const product = products.find((p: IProduct) => p.id === id);
+    if (!product) {
+      res.writeHead(404, { "content-type": "application/json" });
+      res.end(
+        JSON.stringify({
+          message: "Product not found!",
+        }),
+      );
+    }
     // console.log(product);
+    res.writeHead(200, { "content-type": "application/json" });
     res.end(
       JSON.stringify({
         message: "Product retrieved successfully",
