@@ -57,6 +57,48 @@ export const productController = async (
         data: newProduct,
       }),
     );
+  } else if (method === "PUT" && id !== null) {
+    const body = await parseBody(req);
+    const index = products.findIndex((p: IProduct) => p.id === id);
+    //    console.log(index);
+    if (index < 0) {
+      res.writeHead(404, { "content-type": "application/json" });
+      res.end(
+        JSON.stringify({
+          message: "Product not found!",
+        }),
+      );
+    }
+
+    products[index] = { id: products[index].id, ...body };
+
+    insertProduct(products);
+
+    res.writeHead(201, { "content-type": "application/json" });
+    res.end(
+      JSON.stringify({
+        message: "Product updated successfully!",
+        data: products[index],
+      }),
+    );
+  } else if (method === "DELETE" && id !== null) {
+    const index = products.find((p: IProduct) => p.id === id);
+    if (index < 0) {
+      res.writeHead(404, { "content-type": "application/json" });
+      res.end(
+        JSON.stringify({
+          message: "Product not found!",
+        }),
+      );
+    }
+    products.splice(index, 1);
+    insertProduct(products);
+    res.writeHead(200, { "content-type": "application/json" });
+    res.end(
+      JSON.stringify({
+        message: "Product deleted successfully!",
+        data: products[index],
+      }),
+    );
   }
-  //get one /product/1
 };

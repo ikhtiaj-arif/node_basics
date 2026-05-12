@@ -1,16 +1,5 @@
 [
   {
-    "id": 1,
-    "name": "Wireless Bluetooth Headphones",
-    "price": 89.99,
-    "category": "Electronics",
-    "brand": "Sony",
-    "stock": 25,
-    "rating": 4.5,
-    "description": "Noise-cancelling wireless headphones with 30 hours battery backup.",
-    "image": "https://example.com/images/headphones.jpg"
-  },
-  {
     "id": 2,
     "name": "Gaming Mechanical Keyboard",
     "price": 129.99,
@@ -34,14 +23,14 @@
   },
   {
     "id": 4,
-    "name": "4K Ultra HD Monitor",
-    "price": 349.99,
-    "category": "Monitors",
-    "brand": "LG",
-    "stock": 8,
-    "rating": 4.8,
-    "description": "27-inch 4K monitor with HDR support and ultra-thin bezels.",
-    "image": "https://example.com/images/monitor.jpg"
+    "name": "Portable SSD 1TB",
+    "price": 100,
+    "category": "Storage",
+    "brand": "SanDisk",
+    "stock": 20,
+    "rating": 4.4,
+    "description": "High-speed portable SSD with USB-C connectivity.",
+    "image": "https://example.com/images/ssd.jpg"
   },
   {
     "id": 5,
